@@ -1,0 +1,5 @@
+au FileType python setl autoindent tabstop=4 expandtab shiftwidth=4 softtabstop=4
+let python_highlight_all=1
+set guifont=Monaco:h12.00
+set transparency=10
+set guioptions=aAce
