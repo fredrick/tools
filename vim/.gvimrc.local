@@ -1,5 +1,40 @@
+" Auto-close bracket/brace/parentheses
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+autocmd Syntax html,vim inoremap < <lt>><Left>
+" Wrap selected text
+vnoremap (  <ESC>`>a)<ESC>`<i(<ESC>
+vnoremap )  <ESC>`>a)<ESC>`<i(<ESC>
+vnoremap {  <ESC>`>a}<ESC>`<i{<ESC>
+vnoremap }  <ESC>`>a}<ESC>`<i{<ESC>
+vnoremap "  <ESC>`>a"<ESC>`<i"<ESC>
+vnoremap '  <ESC>`>a'<ESC>`<i'<ESC>
+vnoremap `  <ESC>`>a`<ESC>`<i`<ESC>
+vnoremap [  <ESC>`>a]<ESC>`<i[<ESC>
+vnoremap ]  <ESC>`>a]<ESC>`<i[<ESC>
+" Backspace delete empty pairs
+function! InAnEmptyPair()
+let cur = strpart(getline('.'),getpos('.')[2]-2,2)
+for pair in (split(&matchpairs,',') + ['":"',"':'"])
+if cur == join(split(pair,':'),'')
+return 1
+endif
+endfor
+return 0
+endfunc
+
+func! DeleteEmptyPairs()
+if InAnEmptyPair()
+return "\<Left>\<Del>\<Del>"
+else
+return "\<BS>"
+endif
+endfunc
+" Python
 au FileType python setl autoindent tabstop=4 expandtab shiftwidth=4 softtabstop=4
 let python_highlight_all=1
+" Vim environment
 set guifont=Monaco:h12.00
 set transparency=10
 set guioptions=aAce
