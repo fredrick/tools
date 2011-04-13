@@ -1,4 +1,4 @@
-Chromium Upgrader for Mac OS X ([@n1k0](https://github.com/n1k0/chromium-updater))
+Chromium Upgrader for Mac OS X ([@n1k0/chromium-updater](https://github.com/n1k0/chromium-updater))
 ==============================
 
 [Chromium](http://www.chromium.org/) is a free open source Web browser based on [Webkit](http://webkit.org/) and represents a credible alternative to [Chrome](http://www.google.com/chrome), the Google Web browser.
