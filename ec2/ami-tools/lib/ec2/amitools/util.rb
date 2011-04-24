@@ -16,7 +16,7 @@ require 'syslog'
 # generate a unique identifier used for filenames
 #
 def gen_ident()
-  (0..19).inject("") {|ident, n| ident+(?A + Kernel.rand(26)).chr}
+  (0..19).inject("") {|ident, n| ident+(?A.ord + Kernel.rand(26)).chr}
 end
 
 #------------------------------------------------------------------------------#

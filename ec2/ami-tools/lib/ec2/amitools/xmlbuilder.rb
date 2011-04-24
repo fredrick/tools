@@ -179,7 +179,7 @@ class XMLBuilder
 
       def assign_visit(rexml_node, value)
         if value.is_a?(String)
-          rexml_node.text = value
+          rexml_node.text = value.dup
         elsif value.is_a?(REXML::Element)
           value.name = rexml_node.name
           raise "Node #{rexml_node.name} does not have a parent node" if rexml_node.parent.nil?
