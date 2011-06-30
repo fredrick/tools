@@ -2,11 +2,11 @@
 # VirtualBox installer/upgrader for Mac OS X
 # Updated 2011-05-27 v4.0.8
 # TODO: Use http://dlc.sun.com.edgesuite.net/virtualbox/LATEST.TXT to download latest version
-VERSION="4.0.8"
+VERSION=$(curl http://dlc.sun.com.edgesuite.net/virtualbox/LATEST.TXT -s)
 LOCAL_VERSION=$(VBoxManage -v)
-DMG="VirtualBox-4.0.8-71778-OSX.dmg"
+DMG=$(curl http://dlc.sun.com.edgesuite.net/virtualbox/$VERSION/ -s | grep .dmg | awk '{ print $8 }' | sed 's/\(.*\)..../\1/')
 URL="http://dlc.sun.com.edgesuite.net/virtualbox/"$VERSION"/"$DMG
-
+echo $URL
 echo "Downloading VirtualBox" $VERSION
 cd /tmp
 curl -O $URL
