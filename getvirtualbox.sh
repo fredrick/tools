@@ -1,7 +1,8 @@
 #!/bin/sh
 # VirtualBox installer/upgrader for Mac OS X
-# Updated 2011-05-27 v4.0.8
-# TODO: Use http://dlc.sun.com.edgesuite.net/virtualbox/LATEST.TXT to download latest version
+# Author: Fredrick Galoso <https://stackd.com>
+# Updated 2011-06-30 | Automatically download latest DMG
+# Usage: $ ./getvirtualbox.sh
 VERSION=$(curl http://dlc.sun.com.edgesuite.net/virtualbox/LATEST.TXT -s)
 LOCAL_VERSION=$(VBoxManage -v)
 DMG=$(curl http://dlc.sun.com.edgesuite.net/virtualbox/$VERSION/ -s | grep .dmg | awk '{ print $8 }' | sed 's/\(.*\)..../\1/')
