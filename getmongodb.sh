@@ -15,4 +15,3 @@ sudo mkdir /opt/mongo/data/db
 sudo mkdir /opt/mongo/log
 echo 'mongodb: /opt/mongo/bin/mongod'
 # sudo /opt/mongo/bin/mongod --dbpath /opt/mongo/data/db --rest --journal
-

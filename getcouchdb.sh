@@ -9,4 +9,3 @@ cd apache-couchdb-1.1.0
 make
 sudo make install
 echo 'couchdb: /usr/local/bin/couchdb /usr/local/etc/couchdb /usr/local/lib/couchdb'
-
