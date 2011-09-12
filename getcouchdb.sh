@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This script installs CouchDB 1.1.0 on Ubuntu 10.04 LTS and Debian based distros
 echo 'Installing CouchDB dependencies'
 apt-get install xulrunner-1.9.2-dev libicu-dev libcurl4-gnutls-dev libtool erlang-eunit

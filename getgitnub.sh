@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This script will download and install the latest GitNub
 # Fetch GitNub
 git clone git://github.com/Caged/gitnub.git

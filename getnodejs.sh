@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # This script will download and install the latest node.js + npm
 # Install node.js
 git clone https://github.com/joyent/node.git
